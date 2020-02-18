@@ -1,0 +1,61 @@
+{% extends 'base.html'%}
+
+{% block content%}
+<div class = "container">
+    <form class = "form-horizontal" action = "detail" method="POST" role="form">{% csrf_token %}
+        <h2>Student Detail</h2>
+        <div class="form-group">
+            <div class = "row">
+                <label for="prn" class="col-md-3 control-label">PRN</label>
+                <div class="col-md-9">
+                    <input type="number" placeholder="PRN" name = "prn" class="form-control" autofocus>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class = "row">
+                <label for="sem" class="col-md-3 control-label">SEM</label>
+                <select class="selectpicker" name = "sem" data-width="auto" autofocus>
+                    <option>Sem 1</option>
+                    <option>Sem 2</option>
+                    <option>Sem 3</option>
+                    <option>Sem 4</option>
+                </select>
+            </div>
+        </div>
+        <div class = "form-group">
+            <div class = "row">
+                <label for="prn" class="col-md-3 control-label">SUBJECT 1</label>
+                <div class="col-md-9">
+                    <input type="number" placeholder="Marks" name = "sub1" class = "form-control" autofocus>
+                </div>
+            </div>
+        </div>
+        <div class = "form-group">
+            <div class = "row">
+                <label for="prn" class="col-md-3 control-label">SUBJECT 2</label>
+                <div class="col-md-9">
+                    <input type="number" placeholder="Marks" name = "sub2" class = "form-control" autofocus>
+                </div>
+            </div>
+        </div>
+        <div class = "form-group">
+            <div class = "row">
+                <label for="prn" class="col-md-3 control-label">SUBJECT 3</label>
+                <div class="col-md-9">
+                    <input type="number" placeholder="Marks" name = "sub3" class = "form-control" autofocus>
+                </div>
+            </div>
+        </div>
+        <div class = "form-group">
+            <div class = "row">
+                <label for="prn" class="col-md-3 control-label">SUBJECT 4</label>
+                <div class="col-md-9">
+                    <input type="number" placeholder="Marks" name = "sub4" class = "form-control" autofocus>
+                </div>
+            </div>
+        </div>
+        <input type="submit" class="btn btn-primary btn-block" value="Register">
+    </form>     
+</form>               
+{% endblock%}

@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> 
+            Student Marks
+        </title>
+        <link rel = "stylesheet" href = "{% static 'css/bootstrap.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+        <script>
+            function validateForm() {
+              var x = document.forms["myForm"]["prn"].value;
+              if (x == "") {
+                alert("Name must be filled out");
+                return false;
+              }
+            }
+        </script>
+    </head>
+    <body>
+        {% block content %}
+            <div class = "container">
+                <div class = "row form-group justify-content-center">
+                    <div class="center">
+                        <form name = "myform" class = "form-vertical" action = "result" onsubmit ="return validateForm()" method="POST">{% csrf_token %}
+                            <div class="col-md-12">
+                                <h2>Student Login</h2>
+                            </div>
+                            <div class="col-md-12">
+                                <label for="prn">PRN:</label>
+                                <input type ="number" placeholder="PRN" value = "prn" name ="prn">
+                            </div>
+                            <div class="col-md-12">
+                                <label for="sem">Semester:</label>
+                                <select name="sem">
+                                    <option value="sem 1">Sem 1</option>
+                                    <option value="sem 2">Sem 2</option>
+                                    <option value="sem 3">Sem 3</option>
+                                    <option value="sem 4">Sem 4</option>
+                                </select>
+                            </div>
+                            <div class="col-md-12">
+                                <input type ="submit"  value="Result" class ="login100-form-btn" />
+                            </div>
+                        </form>
+                    </div>
+                </div> 
+            </div>
+        {% endblock %}   
+    </body>
+</html>

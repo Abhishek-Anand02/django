@@ -1,0 +1,54 @@
+{% extends 'base.html'%}
+
+{% block content%}
+<div class = "container">
+    <div class = "row form-group justify-content-center">
+        <form action="/" method="GET" role="form">
+            <table class = "table table-borderless table-light">
+                <h2>MARKSHEET</h2>
+                <h5>Prn:{{prn}}</h5>
+                <h5>Semester:{{sem}}</h5>
+                <thead>
+                    <tr>    
+                        <th scope="col">Subject</th>
+                        <th scope="col">T Marks</th>
+                        <th scope="col">O Marks</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Subject 1</th>
+                        <td>100</td>
+                        <td>{{sub1}}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Subject 2</th>
+                        <td>100</td>
+                        <td>{{sub2}}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Subject 3</th>
+                        <td>100</td>
+                        <td>{{sub3}}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Subject 4</th>
+                        <td>100</td>
+                        <td>{{sub4}}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row"></th>
+                        <td colspan="1" align="right">Total</td>
+                        <td>{{total}}</td>
+                    </tr>
+                    <tr>
+                
+                        <th scope="row"></th>
+                        <td colspan="1" align="right">Percentage</td>
+                        <td>{{percent}}</td>
+                    </tr>
+            </table>
+        </form>     
+    </div>
+</div>
+{% endblock%}
